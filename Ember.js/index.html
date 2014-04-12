@@ -1,0 +1,71 @@
+<html>
+	
+	<head>
+
+		<title>Something</title>
+
+		<script src="/bower_components/jquery/jquery.js"></script>
+		<script src="/bower_components/handlebars/handlebars.js"></script>
+		<script src="/bower_components/ember/ember.js"></script>
+		<script src="/bower_components/ember-data/ember-data.js"></script>
+		<script src="/app.js"></script>
+
+		<link href="/bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+
+		<script type="text/x-handlebars" data-template-name="application">
+			<div class="navbar">
+			{{#link-to 'index' class='navbar-brand'}}Main{{/link-to}}
+			{{#link-to 'about' class='navbar-brand'}}About{{/link-to}}
+			{{#link-to 'products' class='navbar-brand'}}Products{{/link-to}}
+			</div>
+			<div class="container">
+			{{outlet}}
+			</div>
+			<footer class="container"></footer>
+		</script>
+		
+		<script type="text/x-handlebars" data-template-name="index">
+			
+			{{#each}}
+				<h1>{{title}}</h1>
+				<p>{{description}}</p>
+				<img {{bind-attr src='image'}} width="600" />
+				<hr />
+			{{/each}}
+			
+		</script>
+
+		<script type="text/x-handlebars" data-template-name="about">
+			<h1>About Page Here</h1>
+			<p>{{about}}</p>
+		</script>
+
+		<script type="text/x-handlebars" data-template-name="products">
+			
+			<h1>Products</h1>
+			
+			{{#each}}
+				<p>
+					{{#link-to 'product' this}}
+						{{title}}
+					{{/link-to}}
+				</p>
+			{{/each}}
+			
+			{{outlet}}
+			
+		</script>
+
+		<script type="text/x-handlebars" data-template-name="product">
+			<h1>{{title}}</h1>
+			<p>{{price}}</p>
+			<p>{{description}}</p>
+		</script>
+
+	</body>
+	
+</html>

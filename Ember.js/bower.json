@@ -1,0 +1,17 @@
+{
+	"name": "ember-test",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Alan James",
+			"email": "alanjames1987@gmail.com"
+		}
+	],
+	"dependencies": {
+		"bootstrap": "3.0.3",
+		"ember.js": "1.2.0",
+		"ember-data": "1.0.0-beta.3",
+		"handlebars.js": "1.1.2",
+		"jquery": "2.0.3"
+	}
+}
