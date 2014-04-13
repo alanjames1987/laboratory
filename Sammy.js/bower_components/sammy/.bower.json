@@ -1,0 +1,14 @@
+{
+  "name": "sammy",
+  "homepage": "https://github.com/quirkey/sammy",
+  "version": "0.7.5",
+  "_release": "0.7.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.7.5",
+    "commit": "3e63d9121fe521da5bd4774840d095775a0c33cb"
+  },
+  "_source": "git://github.com/quirkey/sammy.git",
+  "_target": "0.7.5",
+  "_originalSource": "sammy"
+}

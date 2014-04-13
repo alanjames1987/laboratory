@@ -1,0 +1,39 @@
+{
+  "name": "underscore.db",
+  "main": "dist/underscore.db.js",
+  "version": "0.6.0",
+  "homepage": "https://github.com/typicode/underscore.db",
+  "authors": [
+    "Typicode <typicode@gmail.com>"
+  ],
+  "description": "Use JavaScript objects as databases",
+  "keywords": [
+    "JavaScript",
+    "Underscore",
+    "Lo-Dash",
+    "lodash",
+    "database",
+    "datastore",
+    "JSON",
+    "object",
+    "embed",
+    "embeddable"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "_release": "0.6.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.6.0",
+    "commit": "00137f7e58241871795d37738ae69d31aa8ffad0"
+  },
+  "_source": "git://github.com/typicode/underscore.db.git",
+  "_target": "~0.6.0",
+  "_originalSource": "underscore.db",
+  "_direct": true
+}

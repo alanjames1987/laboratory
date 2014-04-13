@@ -9,9 +9,12 @@
 	],
 	"dependencies": {
 		"bootstrap": "3.0.3",
-		"ember.js": "1.2.0",
+		"ember": "1.2.0",
 		"ember-data": "1.0.0-beta.3",
 		"handlebars.js": "1.1.2",
 		"jquery": "2.0.3"
+	},
+	"resolutions": {
+		"ember": "1.2.0"
 	}
 }

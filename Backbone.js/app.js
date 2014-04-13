@@ -1,16 +1,35 @@
 // classes
 
+var routes = {};
+
+var AppRouter = Backbone.Router.extend({
+	routes : {
+		'' : 'main.index',
+		'test/:id' : 'test.id'
+	}
+});
+
 var ToDoModel = Backbone.Model.extend({});
 
 var ToDoView = Backbone.View.extend({
-	render : function() {
+	initialize : function() {
 		var html = '<p>' + this.model.get('description') + '</p>';
 		$(this.el).html(html);
-		return this;
 	}
 });
 
 // instances
+
+// Initiate the router
+var appRouter = new AppRouter();
+
+appRouter.on('route:main.index', function(actions) {
+	alert('actions');
+});
+
+appRouter.on('route:test.id', function(actions) {
+	alert(actions);
+});
 
 var toDoModel = new ToDoModel({
 	'id' : 1,
@@ -20,6 +39,8 @@ var toDoModel = new ToDoModel({
 
 var toDoView = new ToDoView({
 	'model' : toDoModel
-}).render();
+});
 
 $('body').append(toDoView.el);
+
+Backbone.history.start();
