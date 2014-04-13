@@ -1,18 +1,18 @@
 module.exports.routes = {
-	'/' : {
+	'get /' : {
 		controller : 'main',
 		action : 'index'
 	},
-	'/signup' : {
+	'get /chat' : {
+		controller : 'main',
+		action : 'chat'
+	},
+	'post /signup' : {
 		controller : 'main',
 		action : 'signup'
 	},
-	'/login' : {
+	'post /signin' : {
 		controller : 'main',
-		action : 'login'
-	},
-	'/chat' : {
-		controller : 'main',
-		action : 'chat'
+		action : 'signin'
 	}
-}; 
+};

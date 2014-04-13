@@ -1,76 +1,110 @@
+var hasher = require('password-hash');
+
 var MainController = {
+
 	index : function(req, res) {
 		res.view();
 	},
-	signup : function(req, res) {
-		var username = req.param("username");
-		var password = req.param("password");
 
-		Users.findOneByUsername(username).done(function(err, usr) {
-			if (err) {
-				res.send(500, {
-					error : "DB Error"
-				});
-			} else if (usr) {
-				res.send(400, {
-					error : "Username already Taken"
-				});
-			} else {
-				var hasher = require("password-hash");
-				password = hasher.generate(password);
-
-				Users.create({
-					username : username,
-					password : password
-				}).done(function(error, user) {
-					if (error) {
-						res.send(500, {
-							error : "DB Error"
-						});
-					} else {
-						req.session.user = user;
-						res.send(user);
-					}
-				});
-			}
-		});
-	},
-	login : function(req, res) {
-		var username = req.param("username");
-		var password = req.param("password");
-
-		Users.findOneByUsername(username).done(function(err, usr) {
-			if (err) {
-				res.send(500, {
-					error : "DB Error"
-				});
-			} else {
-				if (usr) {
-					var hasher = require("password-hash");
-					if (hasher.verify(password, usr.password)) {
-						req.session.user = usr;
-						res.send(usr);
-					} else {
-						res.send(400, {
-							error : "Wrong Password"
-						});
-					}
-				} else {
-					res.send(404, {
-						error : "User not Found"
-					});
-				}
-			}
-		});
-	},
 	chat : function(req, res) {
-		if (req.session.user) {
-			res.view({
-				username : req.session.user.username
-			});
-		} else {
+
+		if (!req.session || !req.session.user) {
 			res.redirect('/');
+			return;
 		}
+
+		res.view({
+			'username' : req.session.user.username
+		});
+
+	},
+
+	signup : function(req, res) {
+
+		var username = req.param('username');
+		var password = req.param('password');
+
+		Users.findOneByUsername(username).done(function(err, usr) {
+
+			if (err) {
+				res.send({
+					'error' : 'DB Error'
+				});
+			}
+
+			if (usr) {
+				res.send({
+					'error' : 'Username already Taken'
+				});
+			}
+
+			var hasher = require('password-hash');
+			password = hasher.generate(password);
+
+			Users.create({
+				username : username,
+				password : password
+			}).done(function(err, user) {
+
+				if (err) {
+					res.send({
+						'error' : 'DB Error'
+					});
+					return;
+				}
+
+				if (!usr) {
+					res.send({
+						'error' : 'User not Found'
+					});
+					return;
+				}
+
+				req.session.user = user;
+				res.send(user);
+
+			});
+
+		});
+
+	},
+
+	signin : function(req, res) {
+
+		var username = req.param('username');
+		var password = req.param('password');
+
+		Users.findOneByUsername(username).done(function(err, results) {
+
+			var user = results;
+
+			if (err) {
+				res.send({
+					'error' : 'DB Error'
+				});
+				return;
+			}
+
+			if (!user) {
+				res.send({
+					'error' : 'User not Found'
+				});
+				return;
+			}
+
+			if (!hasher.verify(password, user.password)) {
+				res.send({
+					'error' : 'Wrong Password'
+				});
+				return;
+			}
+
+			req.session.user = user;
+			res.send(user);
+
+		});
+
 	}
 };
+
 module.exports = MainController;

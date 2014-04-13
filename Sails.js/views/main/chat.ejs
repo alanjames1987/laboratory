@@ -10,7 +10,7 @@
 <script>
 
 	var SailsCollection = Backbone.Collection.extend({
-		sailsCollection : "",
+		sailsCollection : message,
 		socket : null,
 		sync : function(method, model, options) {
 			var where = {};
