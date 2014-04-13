@@ -5,7 +5,7 @@ underscoreDB.users = {};
 for (var i = 0, j = 5; i < j; i++) {
 	underscoreDB.notes.push({
 		title : 'Test' + i
-	})
+	});
 }
 
 var app = Sammy('#main', function() {
