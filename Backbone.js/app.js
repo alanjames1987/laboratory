@@ -24,11 +24,11 @@ var ToDoView = Backbone.View.extend({
 var appRouter = new AppRouter();
 
 appRouter.on('route:main.index', function(actions) {
-	alert('actions');
+	console.log('actions');
 });
 
 appRouter.on('route:test.id', function(actions) {
-	alert(actions);
+	console.log(actions);
 });
 
 var toDoModel = new ToDoModel({

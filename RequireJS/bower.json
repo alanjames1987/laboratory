@@ -1,0 +1,14 @@
+{
+  "name": "require-test",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Alan James",
+      "email": "alanjames1987@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "jquery": "2.0.3",
+    "requirejs": "~2.1.11"
+  }
+}
