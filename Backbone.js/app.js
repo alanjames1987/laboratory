@@ -1,7 +1,5 @@
 // classes
 
-var routes = {};
-
 var AppRouter = Backbone.Router.extend({
 	routes : {
 		'' : 'main.index',
@@ -12,8 +10,10 @@ var AppRouter = Backbone.Router.extend({
 var ToDoModel = Backbone.Model.extend({});
 
 var ToDoView = Backbone.View.extend({
-	initialize : function() {
-		var html = '<p>' + this.model.get('description') + '</p>';
+	tagName : 'p',
+	template : _.template('<%= description %>'),
+	initialize : function(data) {
+		var html = this.template(data.toJSON());
 		$(this.el).html(html);
 	}
 });
@@ -37,9 +37,7 @@ var toDoModel = new ToDoModel({
 	'status' : ''
 });
 
-var toDoView = new ToDoView({
-	'model' : toDoModel
-});
+var toDoView = new ToDoView(toDoModel);
 
 $('body').append(toDoView.el);
 
