@@ -16,7 +16,7 @@ var keywordIndicator = document.getElementById('recording_indicator');
 var outputContainer;
 
 // the phones we want to detect
-var wordList = [['CASSADEE', 'AH S AH D IY'], ['CASSADEE(2)', 'AH S AH D'], ['CASSADEE(3)', 'AH S'], ['CASSADEE(4)', 'AE S AH D IY'], ['CASSADEE(5)', 'AE S AH D'], ['CASSADEE(6)', 'AE S'], ['NULL', 'AA'], ['NULL(2)', 'AE'], ['NULL(3)', 'AH'], ['NULL(4)', 'AO'], ['NULL(5)', 'AW'], ['NULL(6)', 'AY'], ['NULL(7)', 'B'], ['NULL(8))', 'CH'], ['NULL(9)', 'D'], ['NULL(10)', 'DH'], ['NULL(11)', 'EH'], ['NULL(12)', 'ER'], ['NULL(13)', 'EY'], ['NULL(14)', 'F'], ['NULL(15)', 'G'], ['NULL(16)', 'HH'], ['NULL(17)', 'IH'], ['NULL(18)', 'IY'], ['NULL(19)', 'JH'], ['NULL(20)', 'K'], ['NULL(21)', 'L'], ['NULL(22)', 'M'], ['NULL(23)', 'N'], ['NULL(24)', 'NG'], ['NULL(25)', 'OW'], ['NULL(26)', 'OY'], ['NULL(27)', 'P'], ['NULL(28)', 'R'], ['NULL(29)', 'S'], ['NULL(30)', 'SH'], ['NULL(31)', 'T'], ['NULL(32)', 'TH'], ['NULL(33)', 'UH'], ['NULL(34)', 'UW'], ['NULL(35)', 'V'], ['NULL(36)', 'W'], ['NULL(37)', 'Y'], ['NULL(38)', 'Z'], ['NULL(39)', 'ZH']];
+var wordList = [["ONE", "W AH N"], ["TWO", "T UW"], ["THREE", "TH R IY"], ["FOUR", "F AO R"], ["FIVE", "F AY V"], ["SIX", "S IH K S"], ["SEVEN", "S EH V AH N"], ["EIGHT", "EY T"], ["NINE", "N AY N"], ["ZERO", "Z IH R OW"], ["NEW-YORK", "N UW Y AO R K"], ["NEW-YORK-CITY", "N UW Y AO R K S IH T IY"], ["PARIS", "P AE R IH S"], ["PARIS(2)", "P EH R IH S"], ["SHANGHAI", "SH AE NG HH AY"], ["SAN-FRANCISCO", "S AE N F R AE N S IH S K OW"], ["LONDON", "L AH N D AH N"], ["BERLIN", "B ER L IH N"], ["SUCKS", "S AH K S"], ["ROCKS", "R AA K S"], ["IS", "IH Z"], ["NOT", "N AA T"], ["GOOD", "G IH D"], ["GOOD(2)", "G UH D"], ["GREAT", "G R EY T"], ["WINDOWS", "W IH N D OW Z"], ["LINUX", "L IH N AH K S"], ["UNIX", "Y UW N IH K S"], ["MAC", "M AE K"], ["AND", "AE N D"], ["AND(2)", "AH N D"], ["O", "OW"], ["S", "EH S"], ["X", "EH K S"]];
 
 var grammars = [{
 	g : {
@@ -26,11 +26,43 @@ var grammars = [{
 		transitions : [{
 			from : 0,
 			to : 0,
-			word : 'CASSADEE'
+			word : "ONE"
 		}, {
 			from : 0,
 			to : 0,
-			word : 'NULL'
+			word : "TWO"
+		}, {
+			from : 0,
+			to : 0,
+			word : "THREE"
+		}, {
+			from : 0,
+			to : 0,
+			word : "FOUR"
+		}, {
+			from : 0,
+			to : 0,
+			word : "FIVE"
+		}, {
+			from : 0,
+			to : 0,
+			word : "SIX"
+		}, {
+			from : 0,
+			to : 0,
+			word : "SEVEN"
+		}, {
+			from : 0,
+			to : 0,
+			word : "EIGHT"
+		}, {
+			from : 0,
+			to : 0,
+			word : "NINE"
+		}, {
+			from : 0,
+			to : 0,
+			word : "ZERO"
 		}]
 	}
 }];
@@ -41,7 +73,7 @@ window.onload = function() {
 	recognition = new webkitSpeechRecognition();
 	recognition.lang = "en";
 
-	recognizer = new Worker('js/recognizer.js');
+	recognizer = new Worker('lib/recognizer.js');
 
 	callbackManager = new CallbackManager();
 

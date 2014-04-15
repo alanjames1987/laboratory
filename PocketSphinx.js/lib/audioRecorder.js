@@ -1,5 +1,5 @@
 (function(window) {
-    var AUDIO_RECORDER_WORKER = 'js/audioRecorderWorker.js';
+    var AUDIO_RECORDER_WORKER = 'lib/audioRecorderWorker.js';
     var AudioRecorder = function(source, cfg) {
 	this.consumers = [];
 	var config = cfg || {};
