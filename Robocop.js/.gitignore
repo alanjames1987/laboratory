@@ -1,45 +1,10 @@
-########################
-# sails
-########################
-.sails
-.waterline
-.rigging
-.tmp
-
-
-########################
-# node.js / npm
-########################
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-pids
-logs
-results
-
-node_modules
-
-npm-debug.log
-
-
-########################
-# misc / editors
-########################
-*~
-*#
-.DS_STORE
-.netbeans
-nbproject
-.idea
-
-
-########################
-# local config
-########################
-config/local.js
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+bower_components/
+node_modules/
