@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Test</title>
+	</head>
+
+	<body>
+
+		<input id="color" />
+
+		<button id="button">
+			Button
+		</button>
+
+		<script src="bower_components/jquery/jquery.js"></script>
+
+		<script>
+			var Annyang = require('annyang');
+			var annyang = new Annyang();
+
+			var commands = {
+				'red' : function() {
+					$('body').css({
+						background : 'red'
+					});
+				},
+				'blue' : function() {
+					$('body').css({
+						background : 'blue'
+					});
+				}
+			};
+
+			annyang.init(commands);
+
+			document.querySelector('#button').addEventListener('click', function() {
+				var color = document.querySelector('#color').value;
+				annyang.trigger(color);
+			});
+
+		</script>
+
+	</body>
+
+</html>

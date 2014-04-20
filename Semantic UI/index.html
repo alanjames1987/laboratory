@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<!-- Load CSS Bower -->
+		<link href="bower_components/semantic-ui/build/packaged/css/semantic.css" type="text/css" rel="stylesheet" />
+
+	</head>
+
+	<body style="margin: 0px;padding: 0px;" class="index">
+
+		<div class="ui inverted vertical sidebar menu">
+			<a class="item"> <i class="home icon"></i> Home </a>
+			<a class="item"> <i class="heart icon"></i> Current Section </a>
+			<a class="item"> <i class="facebook icon"></i> Like us on Facebook </a>
+			<div class="item">
+				<b>More</b>
+				<div class="menu">
+					<a class="item">About</a>
+					<a class="item">Contact Us</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui fixed inverted main menu">
+			<a class="item"> <i class="home icon"></i> Home </a>
+			<a class="item"> <i class="mail icon"></i> Messages </a>
+			<a class="item"> <i class="user icon"></i> Friends </a>
+		</div>
+
+		<div class="ui page grid">
+			<div class="ui active progress">
+				<div class="bar" style="width:100%"></div>
+			</div>
+		</div>
+
+	</body>
+
+	<script src="bower_components/jquery/jquery.js"></script>
+	<script src="bower_components/semantic-ui/build/packaged/javascript/semantic.js"></script>
+
+	<script>
+		$('.ui.sidebar').sidebar('show');
+	</script>
+
+</html>

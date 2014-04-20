@@ -6,7 +6,5 @@
 Icon?
 ehthumbs.db
 Thumbs.db
-merges/
-platforms/
-plugins/
-www/bower_components
+bower_components/
+node_modules/

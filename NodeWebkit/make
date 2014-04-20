@@ -1,0 +1,5 @@
+#!/bin/bash
+
+zip -r app.nw ./
+
+open app.nw
