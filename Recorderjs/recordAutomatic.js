@@ -73,9 +73,11 @@ function analyze() {
 	// calculate average volume
 
 	var averageTotal = 0;
+	
 	for (var i = 0, j = audioVolumes.length; i < j; i++) {
 		averageTotal += audioVolumes[i];
 	}
+	
 	var averageVolumes = averageTotal / audioVolumes.length;
 	
 	console.log(averageTotal);
