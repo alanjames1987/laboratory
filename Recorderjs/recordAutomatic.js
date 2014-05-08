@@ -3,6 +3,7 @@
 var recorder;
 var recording = false;
 
+var audioVolumes = [];
 var audioContext;
 var audioAnalyser;
 var audioSource;
@@ -62,6 +63,24 @@ function analyze() {
 		total += freqByteData[i];
 	}
 
+	// remove the old volumes
+	while (audioVolumes.length > 100) {
+		audioVolumes.shift();
+	}
+
+	audioVolumes.push(total);
+
+	// calculate average volume
+
+	var averageTotal = 0;
+	for (var i = 0, j = audioVolumes.length; i < j; i++) {
+		averageTotal += audioVolumes[i];
+	}
+	var averageVolumes = averageTotal / audioVolumes.length;
+	
+	console.log(averageTotal);
+
+	// calculate if a recording should be stopped or not
 	if (total > 15000) {
 		if (!recording) {
 			startRecording();
