@@ -1,8 +1,10 @@
 // (function() {
 
-var audioContect;
 var recorder;
-var input;
+
+var audioContext;
+var audioAnalyser;
+var audioSource;
 
 function startRecording() {
 	if (recorder) {
@@ -46,8 +48,6 @@ $(document).ready(function() {
 		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 		window.URL = window.URL || window.webkitURL;
 
-		audioContect = new AudioContext;
-
 	} catch (e) {
 		alert('No web audio support in this browser!');
 	}
@@ -56,10 +56,15 @@ $(document).ready(function() {
 		audio : true
 	}, function(stream) {
 
-		input = audioContect.createMediaStreamSource(stream);
-		input.connect(audioContect.destination);
+		audioContext = new AudioContext();
 
-		recorder = new Recorder(input, {
+		audioAnalyser = audioContext.createAnalyser();
+
+		source = audioContext.createMediaStreamSource(stream);
+
+		source.connect(audioAnalyser);
+
+		recorder = new Recorder(source, {
 			workerPath : 'bower_components/RecorderJS/recorderWorker.js'
 		});
 
