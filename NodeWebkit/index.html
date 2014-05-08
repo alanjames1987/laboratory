@@ -2,43 +2,16 @@
 <html>
 
 	<head>
-		<title>Test</title>
+		<title>NodeWebkit Test</title>
+		<link href="my/css/file.css" type="text/css" rel="stylesheet" />
 	</head>
 
 	<body>
 
-		<input id="color" />
-
-		<button id="button">
-			Button
-		</button>
-
-		<script src="bower_components/jquery/jquery.js"></script>
+		<script src="my/js/file.js"></script>
 
 		<script>
-			var Annyang = require('annyang');
-			var annyang = new Annyang();
-
-			var commands = {
-				'red' : function() {
-					$('body').css({
-						background : 'red'
-					});
-				},
-				'blue' : function() {
-					$('body').css({
-						background : 'blue'
-					});
-				}
-			};
-
-			annyang.init(commands);
-
-			document.querySelector('#button').addEventListener('click', function() {
-				var color = document.querySelector('#color').value;
-				annyang.trigger(color);
-			});
-
+			var myNodeModule = require('myNodeModule');
 		</script>
 
 	</body>
