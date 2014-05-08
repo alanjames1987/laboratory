@@ -1,3 +1,5 @@
+// (function() {
+
 var audioContect;
 var recorder;
 var input;
@@ -35,15 +37,17 @@ function stopRecording() {
 
 }
 
-window.onload = function init() {
+
+$(document).ready(function() {
 
 	try {
-		// webkit shim
+
 		window.AudioContext = window.AudioContext || window.webkitAudioContext;
 		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 		window.URL = window.URL || window.webkitURL;
 
 		audioContect = new AudioContext;
+
 	} catch (e) {
 		alert('No web audio support in this browser!');
 	}
@@ -63,4 +67,6 @@ window.onload = function init() {
 		console.log(e);
 	});
 
-};
+});
+
+// })();
