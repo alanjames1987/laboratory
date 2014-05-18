@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Something</title>
+	</head>
+
+	<body>
+		<script src="/bower_components/robocop.js/dist/robocop.js"></script>
+
+		<script>
+			robocop.defineSchema('person', {
+				name : {
+					given : {
+						type : 'string',
+						maxLength : 255
+					},
+					surname : {
+						type : 'string',
+						maxLength : 255
+					}
+				},
+				age : {
+					type : 'number',
+					max : 150,
+					min : 0
+				}
+			});
+
+			var errors = robocop.getSchema('person').validateSync({
+				name : {
+					given : 'John'
+				},
+				age : 30
+			});
+
+			console.log(errors);
+
+		</script>
+
+	</body>
+
+</html>
