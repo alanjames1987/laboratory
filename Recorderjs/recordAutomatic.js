@@ -8,6 +8,8 @@ var audioContext;
 var audioAnalyser;
 var audioSource;
 
+var speechTimeout;
+
 function startRecording() {
 
 	console.log('start');
@@ -54,43 +56,42 @@ function analyze() {
 
 	requestAnimationFrame(analyze);
 
-	var total = 0;
-
+	// calculate the current volume
+	var volume = 0;
 	var freqByteData = new Uint8Array(audioAnalyser.frequencyBinCount);
 	audioAnalyser.getByteFrequencyData(freqByteData);
-
 	for (var i = 0; i < freqByteData.length; i++) {
-		total += freqByteData[i];
+		volume += freqByteData[i];
 	}
 
 	// remove the old volumes
-	while (audioVolumes.length > 100) {
+	while (audioVolumes.length > 1000) {
 		audioVolumes.shift();
 	}
 
-	audioVolumes.push(total);
+	// add the new volume
+	audioVolumes.push(volume);
 
 	// calculate average volume
-
 	var averageTotal = 0;
-	
 	for (var i = 0, j = audioVolumes.length; i < j; i++) {
 		averageTotal += audioVolumes[i];
 	}
-	
 	var averageVolumes = averageTotal / audioVolumes.length;
-	
-	console.log(averageTotal);
 
-	// calculate if a recording should be stopped or not
-	if (total > 15000) {
+	// calculate if the current volume is more than the average
+	if (volume > averageVolumes) {
+
 		if (!recording) {
 			startRecording();
 		}
+
 	} else {
+
 		if (recording) {
 			stopRecording();
 		}
+
 	}
 
 }
@@ -109,7 +110,7 @@ $(document).ready(function() {
 	}
 
 	navigator.getUserMedia({
-		audio : true
+		audio: true
 	}, function(stream) {
 
 		audioContext = new AudioContext();
@@ -121,7 +122,7 @@ $(document).ready(function() {
 		source.connect(audioAnalyser);
 
 		recorder = new Recorder(source, {
-			workerPath : 'bower_components/RecorderJS/recorderWorker.js'
+			workerPath: 'bower_components/Recorderjs/recorderWorker.js'
 		});
 
 		analyze();

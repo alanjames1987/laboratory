@@ -12,8 +12,5 @@
     "jquery": "2.0.3",
     "jquery-ui": "1.10.4",
     "semantic-ui": "0.15.1"
-  },
-  "resolutions": {
-    "jquery": "2.0.3"
   }
 }

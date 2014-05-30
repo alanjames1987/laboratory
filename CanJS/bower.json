@@ -1,5 +1,5 @@
 {
-  "name": "rivets-test",
+  "name": "can-test",
   "version": "0.0.1",
   "authors": [
     {
@@ -8,8 +8,7 @@
     }
   ],
   "dependencies": {
-    "async": "0.6.2",
-    "rivets": "0.6.8",
+    "canjs": "2.1.1",
     "jquery": "2.0.3"
   }
 }
