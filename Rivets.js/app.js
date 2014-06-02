@@ -1,7 +1,14 @@
-var auctionModel = {
-	'title': 'Something'
-}
+var model = Marilyn.model('something');
 
-rivets.bind($('#auction'), {
-	'auction': auctionModel
+var viewModel = model._collection;
+
+rivets.configure({
+	handler: function(target, event, binding) {
+		console.log('test');
+		this.call(target, event, binding.view.models)
+	}
+});
+
+rivets.bind($('#things'), {
+	'list': viewModel
 });

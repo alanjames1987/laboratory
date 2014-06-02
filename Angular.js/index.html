@@ -1,5 +1,6 @@
-<html>
-	
+<!DOCTYPE html>
+<html ng-app>
+
 	<head>
 
 		<title>Something</title>
@@ -8,6 +9,26 @@
 
 	<body>
 
+		<div ng-controller="SomethingController as something">
+
+			<section id="auction">
+				<h1>{{ auction.title }}</h1>
+				<input ng-model="auction.title">
+			</section>
+
+			<div ng-repeat="thing in something.whatever">
+				<p>{{thing.name}}</p>
+			</div>
+
+			<button ng-click="something.changeIt()">Change</button>
+			<button ng-click="something.readIt()">Read</button>
+
+		</div>
+
+		<script src="/bower_components/angular/angular.js"></script>
+
+		<script src="/app.js"></script>
+
 	</body>
-	
+
 </html>

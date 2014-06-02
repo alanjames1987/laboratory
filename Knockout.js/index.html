@@ -8,18 +8,14 @@
 	</head>
 
 	<body>
+		
+		<div data-bind="foreach: collection">
+			<input data-bind="value: name" />
+		</div>
 
-		<ul id="things">
-		  <li rv-each-thing="list">
-		    <input rv-value="thing.name" />
-		  </li>
-		<ul>
-
+		<script src="/bower_components/knockoutjs/dist/knockout.js"></script>
 		<script src="/bower_components/underscore/underscore.js"></script>
 		<script src="/bower_components/marilyn/lib/marilyn.js"></script>
-		<script src="/bower_components/jquery/jquery.js"></script>
-		<script src="/bower_components/rivets/dist/rivets.js"></script>
-
 		<script src="/app.js"></script>
 
 	</body>
