@@ -8,5 +8,6 @@
     }
   ],
   "dependencies": {
+    "Ink": "3.0.5"
   }
 }
