@@ -1,5 +1,5 @@
 {
-  "name": "reactive-test",
+  "name": "Labs-Ractive.js",
   "version": "0.0.1",
   "authors": [
     {
@@ -8,6 +8,6 @@
     }
   ],
   "dependencies": {
-    "reactive": "~0.4.0"
+    "ractive": "0.5.5"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Labs-Semantic-JS",
+  "name": "Labs-Ink",
   "version": "0.0.1",
   "authors": [
     {
@@ -8,9 +8,5 @@
     }
   ],
   "dependencies": {
-    "font-awesome": "4.0.3",
-    "jquery": "2.0.3",
-    "jquery-ui": "1.10.4",
-    "semantic-ui": "0.15.1"
   }
 }
