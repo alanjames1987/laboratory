@@ -1,20 +1,14 @@
 {
-  "name": "Labs-Sammy.js",
-  "version": "0.0.1",
-  "authors": [
-    {
-      "name": "Alan James",
-      "email": "alanjames1987@gmail.com"
-    }
-  ],
-  "dependencies": {
-    "async": "0.6.2",
-    "ejs": "1.0.0",
-    "jquery": "2.0.3",
-    "lodash": "2.4.1",
-    "sammy": "0.7.5",
-    "underscore": "1.6.0",
-    "underscore-observable-arrays": "*",
-    "underscore.db": "0.6.0"
-  }
+	"name": "Labs-Sammy.js",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Alan James",
+			"email": "alanjames1987@gmail.com"
+		}
+	],
+	"dependencies": {
+		"jquery": "2.0.3",
+		"sammy": "0.7.5"
+	}
 }

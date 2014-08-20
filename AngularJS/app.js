@@ -1,25 +1,27 @@
-var SomethingController = function() {
+(function(angular) {
 
-	this.whatever = [{
-		name: 'Alan James'
-	}, {
-		name: 'Alan James 2'
-	}, {
-		name: 'Alan James 3'
-	}, {
-		name: 'Alan James 4'
-	}, {
-		name: 'Alan James 5'
-	}];
+	var app = angular.module('myApp', [
+		'ngCookies',
+		'ngResource',
+		'ngSanitize',
+		'ngRoute'
+	]);
 
-	this.changeIt = function() {
-		this.whatever.push({
-			name: 'Something'
-		});
-	};
+	app.config(['$routeProvider',
 
-	this.readIt = function() {
-		console.log(this.whatever);
-	};
+		function($routeProvider) {
 
-};
+			$routeProvider.when('/', {
+				templateUrl: '/view/main.html',
+				controller: 'SomethingController'
+			});
+
+			$routeProvider.otherwise({
+				redirectTo: '/things'
+			});
+
+		}
+
+	]);
+
+})(angular);

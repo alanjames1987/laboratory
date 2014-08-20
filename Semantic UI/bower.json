@@ -1,16 +1,16 @@
 {
-  "name": "Labs-Semantic-JS",
-  "version": "0.0.1",
-  "authors": [
-    {
-      "name": "Alan James",
-      "email": "alanjames1987@gmail.com"
-    }
-  ],
-  "dependencies": {
-    "font-awesome": "4.0.3",
-    "jquery": "2.0.3",
-    "jquery-ui": "1.10.4",
-    "semantic-ui": "0.15.1"
-  }
+	"name": "Labs-Semantic-JS",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Alan James",
+			"email": "alanjames1987@gmail.com"
+		}
+	],
+	"dependencies": {
+		"font-awesome": "4.0.3",
+		"jquery": "2.0.3",
+		"jquery-ui": "1.10.4",
+		"semantic-ui": "0.15.1"
+	}
 }

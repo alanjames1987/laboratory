@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
 
 	<head>
 
@@ -7,27 +7,19 @@
 
 	</head>
 
-	<body>
+	<body ng-app="myApp">
 
-		<div ng-controller="SomethingController as something">
-
-			<section id="auction">
-				<h1>{{ auction.title }}</h1>
-				<input ng-model="auction.title">
-			</section>
-
-			<div ng-repeat="thing in something.whatever">
-				<p>{{thing.name}}</p>
-			</div>
-
-			<button ng-click="something.changeIt()">Change</button>
-			<button ng-click="something.readIt()">Read</button>
-
-		</div>
+		<div ng-view=""></div>
 
 		<script src="/bower_components/angular/angular.js"></script>
+		<script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="/bower_components/angular-resource/angular-resource.js"></script>
+		<script src="/bower_components/angular-route/angular-route.js"></script>
+		<script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
 
 		<script src="/app.js"></script>
+
+		<script src="/controller/main.js"></script>
 
 	</body>
 

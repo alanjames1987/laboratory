@@ -1,13 +1,13 @@
 {
-  "name": "Labs-Headtrackr",
-  "version": "0.0.1",
-  "authors": [
-    {
-      "name": "Alan James",
-      "email": "alanjames1987@gmail.com"
-    }
-  ],
-  "dependencies": {
-    "headtrackr": "*"
-  }
+	"name": "Labs-Headtrackr",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Alan James",
+			"email": "alanjames1987@gmail.com"
+		}
+	],
+	"dependencies": {
+		"headtrackr": "*"
+	}
 }

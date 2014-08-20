@@ -1,16 +1,16 @@
 {
-  "name": "Labs-Rivets.js",
-  "version": "0.0.1",
-  "authors": [
-    {
-      "name": "Alan James",
-      "email": "alanjames1987@gmail.com"
-    }
-  ],
-  "dependencies": {
-    "rivets": "0.6.8",
-    "jquery": "2.0.3",
-    "marilyn": "~0.8.2",
-    "jquery-ui": "~1.10.4"
-  }
+	"name": "Labs-Rivets.js",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Alan James",
+			"email": "alanjames1987@gmail.com"
+		}
+	],
+	"dependencies": {
+		"rivets": "0.6.8",
+		"jquery": "2.0.3",
+		"marilyn": "~0.8.2",
+		"jquery-ui": "~1.10.4"
+	}
 }

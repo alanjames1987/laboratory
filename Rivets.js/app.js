@@ -11,23 +11,14 @@ var model = Marilyn.model('something', function() {
 // 	}
 // });
 
-var modelTest = [{
-	name: '1',
-}, {
-	name: '2',
-}, {
-	name: '3',
-}];
-
-var view = rivets.bind($('#things'), {
-	'list': modelTest
-});
-
-$('#things').sortable({
-	update: function(event, ui) {
-		view.publish();
-		for (var i = 0, j = modelTest.length; i < j; i++) {
-			console.log(modelTest[i].name);
-		}
+var modelTest = {
+	first : 'Alan',
+	last : 'James',
+	whole : function() {
+		return this.first + this.last
 	}
+};
+
+var view = rivets.bind($('#user'), {
+	'user' : modelTest
 });

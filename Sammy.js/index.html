@@ -3,28 +3,23 @@
 
 	<head>
 
-		<title>Something</title>
+		<title>Sammy.js Application</title>
 
 	</head>
 
 	<body>
 
-		<a href="#/">Main</a>
-		<a href="#/notes">Notes</a>
+		<div id="container"></div>
 
-		<div id="notes"></div>
+		<script src="/lib/vendor/jquery/jquery-2.1.1.min.js"></script>
+		<script src="/lib/vendor/sammy/lib/sammy.js"></script>
 
-		<script src="/js/vendor/ejs/ejs.js"></script>
+		<script src="/lib/vendor/sammy/lib/plugins/sammy.template.js"></script>
 
-		<script src="/bower_components/async/lib/async.js"></script>
-		<script src="/bower_components/underscore/underscore.js"></script>
-		<script src="/bower_components/underscore.db/dist/underscore.db.js"></script>
-		<script src="/bower_components/jquery/jquery.js"></script>
-		<script src="/bower_components/sammy/lib/sammy.js"></script>
-		<script src="/bower_components/sammy/lib/plugins/sammy.ejs.js"></script>
-		<script src="/bower_components/underscore-observable-arrays/js/underscore.observable.js"></script>
+		<script src="/app.js"></script>
 
-		<script src="/js/app/app.js"></script>
+		<script src="/controller/main.js"></script>
+		<script src="/controller/user.js"></script>
 
 	</body>
 

@@ -1,14 +1,14 @@
 {
-  "name": "Labs-CanJS",
-  "version": "0.0.1",
-  "authors": [
-    {
-      "name": "Alan James",
-      "email": "alanjames1987@gmail.com"
-    }
-  ],
-  "dependencies": {
-    "canjs": "2.1.1",
-    "jquery": "2.0.3"
-  }
+	"name": "Labs-CanJS",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Alan James",
+			"email": "alanjames1987@gmail.com"
+		}
+	],
+	"dependencies": {
+		"canjs": "2.1.1",
+		"jquery": "2.0.3"
+	}
 }

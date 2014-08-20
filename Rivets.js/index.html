@@ -9,11 +9,11 @@
 
 	<body>
 
-		<ul id="things">
-		  <li rv-each-thing="list">
-		    <input rv-value="thing.name" />
-		  </li>
-		<ul>
+		<div id="user">
+			<p>{user.first}</p>
+			<p>{user.last}</p>
+			<p>{user.whole}</p>
+		</div>
 
 		<script src="/bower_components/underscore/underscore.js"></script>
 		<script src="/bower_components/marilyn/lib/marilyn.js"></script>

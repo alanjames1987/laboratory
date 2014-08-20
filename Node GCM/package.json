@@ -1,8 +1,8 @@
 {
-  "name": "Labs-NodeGCM",
-  "version": "0.0.1",
-  "dependencies": {
-    "express": "3.4.7",
-    "node-gcm": "^0.9.9"
-  }
+	"name": "Labs-NodeGCM",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "3.4.7",
+		"node-gcm": "^0.9.9"
+	}
 }
