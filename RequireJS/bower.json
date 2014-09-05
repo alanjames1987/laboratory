@@ -9,6 +9,7 @@
 	],
 	"dependencies": {
 		"jquery": "2.0.3",
-		"requirejs": "~2.1.11"
+		"marilyn": "0.9.0",
+		"requirejs": "2.1.11"
 	}
 }
