@@ -1,15 +1,17 @@
 {
-	"name": "Labs-RequireJS",
-	"version": "0.0.1",
-	"authors": [
-		{
-			"name": "Alan James",
-			"email": "alanjames1987@gmail.com"
-		}
-	],
-	"dependencies": {
-		"jquery": "2.0.3",
-		"marilyn": "0.9.0",
-		"requirejs": "2.1.11"
-	}
+  "name": "Labs-RequireJS",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Alan James",
+      "email": "alanjames1987@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "jquery": "2.0.3",
+    "marilyn": "0.11.1",
+    "requirejs": "2.1.14",
+    "rivets": "0.6.10",
+    "sammy": "0.7.6"
+  }
 }
