@@ -1,48 +1,53 @@
-require.config({
-	'paths': {
-		'jquery': 'bower_components/jquery/jquery',
-		'marilyn': 'bower_components/marilyn/lib/marilyn',
-		'rivets': 'bower_components/rivets/dist/rivets',
-		'sammy': 'bower_components/sammy/lib/sammy',
-		'sammyTemplate': 'bower_components/sammy/lib/plugins/sammy.template',
-		'underscore': 'bower_components/underscore/underscore',
-	}
-});
+(function() {
 
-require([
+	require.config({
+		// 'baseUrl' : '/',
+		'paths': {
+			'jquery': 'bower_components/jquery/jquery',
+			'marilyn': 'bower_components/marilyn/lib/marilyn',
+			'rivets': 'bower_components/rivets/dist/rivets',
+			'sammy': 'bower_components/sammy/lib/sammy',
+			'sammyTemplate': 'bower_components/sammy/lib/plugins/sammy.template',
+			'underscore': 'bower_components/underscore/underscore',
+		}
+	});
 
-	'rivets',
-	'sammy',
+	require([
 
-	'sammyTemplate',
+		'rivets',
+		'sammy',
 
-	'model/user',
+		'sammyTemplate',
 
-	'controller/main',
-	'controller/user',
+		'model/user',
 
-], function(
+		'controller/main',
+		'controller/user',
 
-	rivets,
-	sammy,
+	], function(
 
-	sammyTemplate,
+		rivets,
+		sammy,
 
-	userModel,
+		sammyTemplate,
 
-	mainController,
-	userController
+		userModel,
 
-) {
+		mainController,
+		userController
 
-	var app = sammy('body');
+	) {
 
-	app.use(sammyTemplate);
+		var app = sammy('body');
 
-	app.get('#/', mainController.read);
+		app.use(sammyTemplate);
 
-	app.get('#/user', userController.read);
+		app.get('#/', mainController.read);
 
-	app.run('#/');
+		app.get('#/user', userController.read);
 
-});
+		app.run('#/');
+
+	});
+
+})();

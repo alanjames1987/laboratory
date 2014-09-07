@@ -1,20 +1,20 @@
-define(function() {
+(function() {
 
-	require([
-		'marilyn'
+	define([
+		'marilyn',
 	], function(
 		marilyn
 	) {
 
-		marilyn.model('user', function(){
+		marilyn.model('user', function() {
 
-			this.someMethod = function(){
+			this.someMethod = function() {
 				var sum = 2 + 2;
-				console.log('test');
+				return sum;
 			};
 
 		});
 
 	});
 
-});
+})();

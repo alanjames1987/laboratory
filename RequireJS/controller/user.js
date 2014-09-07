@@ -1,13 +1,27 @@
-define(function() {
+(function() {
 
-	require([
-		'marilyn'
+	define([
+		'jquery',
+		'marilyn',
 	], function(
+		$,
 		marilyn
 	) {
 
-		var userModel = marilyn.model('user');
+		var controller = {
+			'read': function(context) {
+
+				$('#content').html('User Read');
+
+				var userModel = marilyn.model('user');
+
+				userModel.someMethod();
+
+			}
+		};
+
+		return controller;
 
 	});
 
-});
+})();
