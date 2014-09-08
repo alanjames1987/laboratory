@@ -1,0 +1,8 @@
+{
+  "name": "Labs-Primus",
+  "version": "0.0.1",
+  "dependencies": {
+    "primus": "2.4.5",
+    "express": "~4.8.8"
+  }
+}
