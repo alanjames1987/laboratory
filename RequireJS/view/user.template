@@ -1,0 +1,9 @@
+<div>
+	<h1><%= myVariable %></h1>
+</div>
+
+<button id="create">Create</button>
+
+<p rv-each-user="users">
+	{user.name}
+</p>

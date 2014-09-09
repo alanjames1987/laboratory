@@ -3,14 +3,24 @@
 	define([
 		'jquery',
 		'marilyn',
+		'rivets',
 	], function(
 		$,
-		marilyn
+		marilyn,
+		rivets
 	) {
 
 		var controller = {
 			'read': function(context) {
-				$('#content').html('Main Read');
+
+				context.render('/view/main.template', {
+					'myVariable': 'Main Page'
+				}, function(output) {
+
+					$('#content').html(output);
+
+				});
+
 			}
 		};
 

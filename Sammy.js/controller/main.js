@@ -9,7 +9,6 @@
 		context.render('/view/main.template', {
 			'myVariable': 'Some value'
 		}, function(output) {
-			console.log(output);
 			$('#container').html(output);
 		});
 

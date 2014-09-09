@@ -3,19 +3,45 @@
 	define([
 		'jquery',
 		'marilyn',
+		'rivets',
 	], function(
 		$,
-		marilyn
+		marilyn,
+		rivets
 	) {
+
+		var userModel = marilyn.model('user');
 
 		var controller = {
 			'read': function(context) {
 
-				$('#content').html('User Read');
+				var users = [];
 
-				var userModel = marilyn.model('user');
+				userModel.read({
+					'__id': 1
+				}, function(err, results) {
+					users = results;
+				});
 
-				userModel.someMethod();
+				context.render('/view/user.template', {
+					'myVariable': 'User Page'
+				}, function(output) {
+
+					$('#content').html(output);
+
+					$('#create').click(function() {
+
+						userModel.create({
+							'name': 'Alan James' + users.length
+						});
+
+					});
+
+					rivets.bind($('body'), {
+						'users': users,
+					});
+
+				});
 
 			}
 		};
