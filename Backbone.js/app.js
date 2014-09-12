@@ -34,6 +34,4 @@
 
 	Backbone.history.start();
 
-
-
 })();

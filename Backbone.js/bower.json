@@ -1,15 +1,13 @@
 {
-	"name": "Labs-Backbone.js",
-	"version": "0.0.1",
-	"authors": [
-		{
-			"name": "Alan James",
-			"email": "alanjames1987@gmail.com"
-		}
-	],
-	"dependencies": {
-		"backbone": "1.1.0",
-		"jquery": "2.0.3",
-		"underscore": "1.5.2"
-	}
+  "name": "Labs-Backbone.js",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Alan James",
+      "email": "alanjames1987@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "backbone": "1.1.2"
+  }
 }
