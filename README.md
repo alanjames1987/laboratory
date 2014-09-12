@@ -1,4 +1,4 @@
-Labratory
+Laboratory
 ---
 
 The purpose of this repository is to be a place where I put my experiments with various technology.
