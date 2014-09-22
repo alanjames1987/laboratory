@@ -38,7 +38,7 @@
 					});
 
 					rivets.bind($('body'), {
-						'users': users,
+						'users': userModel._collection,
 					});
 
 				});
