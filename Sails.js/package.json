@@ -1,8 +1,10 @@
 {
 	"name": "Labs-Sails.js",
-	"private": true,
 	"version": "0.0.0",
-	"description": "a Sails application",
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
 	"dependencies": {
 		"sails": "0.9.16",
 		"grunt": "0.4.1",
@@ -14,9 +16,5 @@
 	"scripts": {
 		"start": "node app.js",
 		"debug": "node debug app.js"
-	},
-	"main": "app.js",
-	"repository": "",
-	"author": "",
-	"license": ""
+	}
 }

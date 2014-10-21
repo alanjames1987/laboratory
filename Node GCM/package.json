@@ -1,8 +1,12 @@
 {
 	"name": "Labs-NodeGCM",
 	"version": "0.0.1",
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
 	"dependencies": {
 		"express": "3.4.7",
-		"node-gcm": "^0.9.9"
+		"node-gcm": "0.9.9"
 	}
 }

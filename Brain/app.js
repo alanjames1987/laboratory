@@ -1,9 +1,9 @@
 var brain = require('brain');
 NeuralNetwork = brain.NeuralNetwork;
 
-var net = new NeuralNetwork();
+var network = new NeuralNetwork();
 
-net.train([{
+var train = network.train([{
 	input: [0, 0],
 	output: [0]
 }, {
@@ -17,6 +17,6 @@ net.train([{
 	output: [0]
 }]);
 
-var output = net.run([1, 0]);
+var output = network.run([1, 0]);
 
-console.log(output);
+console.log(network.toJSON());

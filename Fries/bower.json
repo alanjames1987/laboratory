@@ -1,15 +1,13 @@
 {
-  "name": "fries-cordova",
-  "version": "0.0.1",
-  "authors": [
-    {
-      "name": "Alan James",
-      "email": "alanjames1987@gmail.com"
+    "name": "Labs-Fries",
+    "version": "0.0.1",
+    "authors": [{
+        "name": "Alan James",
+        "email": "alanjames1987@gmail.com"
+    }],
+    "dependencies": {
+        "fastclick": "1.0.2",
+        "fries": "2.0.3",
+        "jquery": "2.0.3"
     }
-  ],
-  "dependencies": {
-    "fries": "~2.0.3",
-    "jquery": "2.0.3",
-    "fastclick": "~1.0.2"
-  }
 }

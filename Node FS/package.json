@@ -1,6 +1,9 @@
 {
 	"name": "Labs-NodeFS",
 	"version": "0.0.1",
-	"dependencies": {
-	}
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
+	"dependencies": {}
 }

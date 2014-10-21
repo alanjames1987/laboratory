@@ -1,12 +1,10 @@
 {
 	"name": "Labs-Ember.js",
 	"version": "0.0.1",
-	"authors": [
-		{
-			"name": "Alan James",
-			"email": "alanjames1987@gmail.com"
-		}
-	],
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
 	"dependencies": {
 		"bootstrap": "3.0.3",
 		"ember": "1.2.0",

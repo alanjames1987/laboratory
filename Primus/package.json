@@ -1,8 +1,12 @@
 {
-  "name": "Labs-Primus",
-  "version": "0.0.1",
-  "dependencies": {
-    "primus": "2.4.5",
-    "express": "~4.8.8"
-  }
+	"name": "Labs-Primus",
+	"version": "0.0.1",
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
+	"dependencies": {
+		"express": "4.8.8",
+		"primus": "2.4.5"
+	}
 }

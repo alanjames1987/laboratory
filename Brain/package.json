@@ -1,7 +1,11 @@
 {
-  "name": "Labs-Brain",
-  "version": "0.0.1",
-  "dependencies": {
-    "brain": "^0.7.0"
-  }
+	"name": "Labs-Brain",
+	"version": "0.0.1",
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
+	"dependencies": {
+		"brain": "0.7.0"
+	}
 }

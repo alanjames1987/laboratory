@@ -1,12 +1,10 @@
 {
 	"name": "Labs-Foundation",
 	"version": "0.0.1",
-	"authors": [
-		{
-			"name": "Alan James",
-			"email": "alanjames1987@gmail.com"
-		}
-	],
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
 	"dependencies": {
 		"foundation": "5.2.0",
 		"normalize-css": "2.1.3"

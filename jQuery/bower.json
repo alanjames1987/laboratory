@@ -1,12 +1,10 @@
 {
 	"name": "Labs-jQuery",
 	"version": "0.0.1",
-	"authors": [
-		{
-			"name": "Alan James",
-			"email": "alanjames1987@gmail.com"
-		}
-	],
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
 	"dependencies": {
 		"jquery": "2.0.3"
 	}

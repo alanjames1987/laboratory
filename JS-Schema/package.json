@@ -1,13 +1,11 @@
 {
-  "name": "Labs-JS-Schema",
-  "version": "0.0.1",
-  "authors": [
-    {
-      "name": "Alan James",
-      "email": "alanjames1987@gmail.com"
+    "name": "Labs-JS-Schema",
+    "version": "0.0.1",
+    "authors": [{
+        "name": "Alan James",
+        "email": "alanjames1987@gmail.com"
+    }],
+    "dependencies": {
+        "js-schema": "0.6.2"
     }
-  ],
-  "dependencies": {
-    "js-schema": "0.6.2"
-  }
 }

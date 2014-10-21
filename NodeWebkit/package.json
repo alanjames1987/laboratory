@@ -1,12 +1,10 @@
 {
-	"name": "testing-application",
+	"name": "Labs-NodeWebkit",
 	"version": "0.0.1",
-	"authors": [
-		{
-			"name": "Alan James",
-			"email": "alanjames1987@gmail.com"
-		}
-	],
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
 	"dependencies": {
 		"annyang": "1.0.1",
 		"express": "3.4.7"

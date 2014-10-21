@@ -1,14 +1,12 @@
 {
 	"name": "Labs-Recorderjs",
 	"version": "0.0.1",
-	"authors": [
-		{
-			"name": "Alan James",
-			"email": "alanjames1987@gmail.com"
-		}
-	],
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
 	"dependencies": {
-		"Recorderjs": "*",
-		"jquery": "~2.1.1"
+		"jquery": "2.1.1",
+		"Recorderjs": "*"
 	}
 }

@@ -1,19 +1,17 @@
 {
 	"name": "Labs-PhoneGap",
 	"version": "0.0.1",
-	"authors": [
-		{
-			"name": "Alan James",
-			"email": "alanjames1987@gmail.com"
-		}
-	],
+	"authors": [{
+		"name": "Alan James",
+		"email": "alanjames1987@gmail.com"
+	}],
 	"dependencies": {
 		"jquery": "2.0.3",
+		"jquery-hammerjs": "1.0.6",
 		"jquery-ui": "1.10.3",
 		"momentjs": "2.5.0",
 		"node-uuid": "1.4.1",
 		"normalize-css": "2.1.3",
-		"semantic-ui": "0.15.1",
-		"jquery-hammerjs": "~1.0.6"
+		"semantic-ui": "0.15.1"
 	}
 }
