@@ -15,6 +15,11 @@
 			<p>{user.whole}</p>
 		</div>
 
+		<div rv-each-user="users">
+			<span rv-html="index | add 1"></span>
+			<span>{user.whole}</span>
+		</div>
+
 		<script src="/bower_components/underscore/underscore.js"></script>
 		<script src="/bower_components/marilyn/lib/marilyn.js"></script>
 		<script src="/bower_components/jquery/jquery.js"></script>
