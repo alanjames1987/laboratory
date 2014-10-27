@@ -1,16 +1,3 @@
-var model = Marilyn.model('something', function() {
-	this.after('create', function() {
-
-	});
-});
-
-// rivets.configure({
-// 	handler: function(target, event, binding) {
-// 		console.log('test');
-// 		this.call(target, event, binding.view.models)
-// 	}
-// });
-
 rivets.formatters.add = function(value, format) {
 
 	value = parseInt(value);
@@ -51,4 +38,10 @@ var modelArray = [{
 var view = rivets.bind($('body'), {
 	'user': modelObject,
 	'users': modelArray
+});
+
+$('#sort').sortable({
+	update: function() {
+		view.publish();
+	}
 });

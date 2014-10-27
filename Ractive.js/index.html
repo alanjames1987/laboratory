@@ -5,11 +5,50 @@
 
 		<title>Something</title>
 
+		<style>
+			.user{
+				background: red;
+			}
+		</style>
+
 	</head>
 
 	<body>
 
-		<script src="/bower_components/reactive/reactive.js"></script>
+		<h1>Display One Object</h1>
+		<div id="user">
+			<p>{{user.first}}</p>
+			<p>{{user.last}}</p>
+			<p>{{user.whole}}</p>
+		</div>
+
+		<hr />
+
+		<h1>List Multiple Objects</h1>
+		<div rv-each-user="users">
+			<p rv-html="index | add 1"></p>
+			<p>{{user.first}}</p>
+			<p>{{user.last}}</p>
+			<p>{{user.whole}}</p>
+		</div>
+
+		<hr />
+
+		<h1>Sort Multiple Objects</h1>
+		<div id="sort">
+			<div rv-each-user="users" class="user">
+				<p rv-html="index | add 1"></p>
+				<p>{{user.first}}</p>
+				<p>{{user.last}}</p>
+				<p>{{user.whole}}</p>
+			</div>
+		</div>
+
+		<script src="/bower_components/underscore/underscore.js"></script>
+		<script src="/bower_components/marilyn/lib/marilyn.js"></script>
+		<script src="/bower_components/jquery/jquery.js"></script>
+		<script src="/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+		<script src="/bower_components/ractive/ractive.js"></script>
 
 		<script src="/app.js"></script>
 
