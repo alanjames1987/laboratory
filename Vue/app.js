@@ -1,12 +1,3 @@
-rivets.formatters.add = function(value, format) {
-
-	value = parseInt(value);
-	format = parseInt(format);
-
-	return value + format;
-
-};
-
 var modelObject = {
 	'first': 'Alan',
 	'last': 'James',
@@ -35,9 +26,12 @@ var modelArray = [{
 	}
 }];
 
-var view = rivets.bind($('body'), {
-	'user': modelObject,
-	'users': modelArray
+var view = new Vue({
+	'el': 'body',
+	'data': {
+		'user': modelObject,
+		'users': modelArray
+	}
 });
 
 $('#click').click(function() {
@@ -54,6 +48,6 @@ $('#click').click(function() {
 
 $('#sort').sortable({
 	update: function() {
-		view.publish();
+		console.log(view);
 	}
 });

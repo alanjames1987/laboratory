@@ -7,8 +7,8 @@
 	}],
 	"dependencies": {
 		"jquery": "2.0.3",
-		"marilyn": "0.16.5",
 		"jquery-ui": "1.10.4",
+		"marilyn": "0.16.5",
 		"ractive": "0.5.5"
 	}
 }
