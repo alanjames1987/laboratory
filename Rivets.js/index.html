@@ -9,6 +9,10 @@
 			.user{
 				background: red;
 			}
+			.half{
+				width:45%;
+				float:left;
+			}
 		</style>
 
 	</head>
@@ -26,13 +30,29 @@
 
 		<hr />
 
-		<h1>Sort Multiple Objects</h1>
-		<div id="sort">
-			<div rv-each-user="users" class="user">
-				<p rv-html="index | add 1"></p>
-				<p>{user.first}</p>
-				<p>{user.last}</p>
-				<p>{user.whole}</p>
+		<div class="half">
+			<h1>Multiple Objects</h1>
+			<div>
+				<div rv-each-user="users">
+					<p rv-html="index | add 1"></p>
+					<p>Id: {user.id}</p>
+					<p>First Name: {user.first}</p>
+					<p>Last Name: {user.last}</p>
+					<p>Whole Name: {user.whole()}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="half">
+			<h1>Sort Multiple Objects</h1>
+			<div id="sort">
+				<div rv-each-user="users" rv-id="user.id" class="user">
+					<p rv-html="index | add 1"></p>
+					<p>Id: {user.id}</p>
+					<p>First Name: {user.first}</p>
+					<p>Last Name: {user.last}</p>
+					<p>Whole Name: {user.whole()}</p>
+				</div>
 			</div>
 		</div>
 
