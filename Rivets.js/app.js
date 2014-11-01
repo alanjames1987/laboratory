@@ -61,6 +61,7 @@ $('#click').click(function() {
 });
 
 $('#sort').sortable({
+
 	update: function() {
 
 		var sortedIds = $('#sort').sortable('toArray');
@@ -80,4 +81,5 @@ $('#sort').sortable({
 		}
 
 	}
+
 });
