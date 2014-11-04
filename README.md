@@ -1,9 +1,8 @@
 Laboratory
 ---
 
-The purpose of this repository is to be a place where I put my experiments with various technology.
+A repository to put my experiments with various technology.
 
 Each experiment is in its own folder and will use package managers to install dependencies if avalible.
 
-Every commit message will be:  
-`Commit`
+You could also consider these examples of various technology.
