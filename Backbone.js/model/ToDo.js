@@ -8,7 +8,7 @@
 				console.log(this.get('id') + ' has changed');
 			});
 
-		}
+		},
 
 	});
 
