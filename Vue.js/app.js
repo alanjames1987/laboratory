@@ -7,18 +7,21 @@ var modelObject = {
 };
 
 var modelArray = [{
+	'id': 1,
 	'first': 'Alan',
 	'last': 'James',
 	'whole': function() {
 		return this.first + ' ' + this.last;
 	}
 }, {
+	'id': 2,
 	'first': 'Alan2',
 	'last': 'James2',
 	'whole': function() {
 		return this.first + ' ' + this.last;
 	}
 }, {
+	'id': 3,
 	'first': 'Alan3',
 	'last': 'James3',
 	'whole': function() {
@@ -34,11 +37,16 @@ var view = new Vue({
 	}
 });
 
+var id = modelArray.length;
+
 $('#click').click(function() {
 
+	id++;
+
 	modelArray.push({
-		'first': 'Alan4',
-		'last': 'James4',
+		'id': id,
+		'first': 'Alan' + id,
+		'last': 'James' + id,
 		'whole': function() {
 			return this.first + ' ' + this.last;
 		}
@@ -47,7 +55,25 @@ $('#click').click(function() {
 });
 
 $('#sort').sortable({
+
 	update: function() {
-		console.log(view);
+
+		var sortedIds = $('#sort').sortable('toArray');
+
+		var newArr = sortedIds.map(function(id) {
+			return _.find(modelArray, function(item) {
+				return item.id == id;
+			});
+		});
+
+		while (modelArray.length > 0) {
+			modelArray.pop();
+		}
+
+		for (var i = 0, j = newArr.length; i < j; i++) {
+			modelArray.push(newArr[i]);
+		}
+
 	}
+
 });
