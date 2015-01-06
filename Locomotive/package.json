@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "locomotive": "0.4.x",
+    "locomotive": "0.3.7",
     "bootable": "0.2.x",
     "bootable-environment": "0.2.x",
     "express": "3.x.x",

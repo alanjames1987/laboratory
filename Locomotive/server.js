@@ -3,7 +3,7 @@ var locomotive = require('locomotive')
 
 // Create a new application and initialize it with *required* support for
 // controllers and views.  Move (or remove) these lines at your own peril.
-var app = new locomotive.Application();
+var app = locomotive;
 app.phase(locomotive.boot.controllers(__dirname + '/app/controllers'));
 app.phase(locomotive.boot.views());
 
