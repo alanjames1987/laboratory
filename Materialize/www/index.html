@@ -2,40 +2,371 @@
 <html>
 
 	<head>
+
 		<title>Materialize</title>
+
+		<!-- disallow zooming on mobile -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+		<!-- tell iPhone to run in fullscreen -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<!-- tell Android to run in fullscreen -->
+		<meta name="mobile-web-app-capable" content="yes">
 
 		<link href="bower_components/materialize/dist/css/materialize.css" rel="stylesheet" />
 
 		<style>
-			body,
-			html {
-				height: 100%;
+
+			* {
+			    -webkit-touch-callout: none;
+			    -webkit-user-select: none;
+			    -khtml-user-select: none;
+			    -moz-user-select: none;
+			    -ms-user-select: none;
+			    user-select: none;
 			}
-			button {
-				width: 33%;
-				height: 33% !important;
-				margin:0 !important;
+
+			body{
+				margin-bottom: 10em;
 			}
+
 		</style>
 
 	</head>
 
 	<body>
 
-		<button class="waves-effect waves-teal btn-flat">1</button>
-		<button class="waves-effect waves-teal btn-flat">2</button>
-		<button class="waves-effect waves-teal btn-flat">3</button>
-		<br />
-		<button class="waves-effect waves-teal btn-flat">4</button>
-		<button class="waves-effect waves-teal btn-flat">5</button>
-		<button class="waves-effect waves-teal btn-flat">6</button>
-		<br />
-		<button class="waves-effect waves-teal btn-flat">7</button>
-		<button class="waves-effect waves-teal btn-flat">8</button>
-		<button class="waves-effect waves-teal btn-flat">9</button>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper grey darken-4">
+					<div class="col s12">
+						<ul class="right">
+							<li><a href="#"><i class="mdi-action-search"></i></a></li>
+							<li><a href="#"><i class="mdi-action-view-module"></i></a></li>
+							<li><a href="#"><i class="mdi-navigation-refresh"></i></a></li>
+							<li><a href="#"><i class="mdi-navigation-more-vert"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<div class="container">
+
+			<h1>Progress</h1>
+
+			<div class="progress">
+				<div class="determinate" style="width: 70%"></div>
+			</div>
+
+			<div class="progress">
+				<div class="indeterminate"></div>
+			</div>
+
+			<div class="preloader-wrapper big active">
+				<div class="spinner-layer spinner-blue">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-red">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-yellow">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+
+				<div class="spinner-layer spinner-green">
+					<div class="circle-clipper left">
+						<div class="circle"></div>
+					</div>
+					<div class="gap-patch">
+						<div class="circle"></div>
+					</div>
+					<div class="circle-clipper right">
+						<div class="circle"></div>
+					</div>
+				</div>
+			</div>
+
+			<h1>Badges</h1>
+
+			<ul class="collection">
+				<a href="#!" class="collection-item">Alan<span class="badge">1</span></a>
+				<a href="#!" class="collection-item">Alan<span class="new badge">4</span></a>
+				<a href="#!" class="collection-item">Alan</li>
+				<a href="#!" class="collection-item">Alan<span class="badge">14</span></a>
+			</ul>
+
+			<h1>Buttons</h1>
+
+			<a id="toast" class="waves-effect waves-light btn">Toast</a>
+			<a class="waves-effect waves-light btn"><i class="mdi-file-cloud left"></i>button</a>
+			<a class="waves-effect waves-light btn"><i class="mdi-file-cloud right"></i>button</a>
+
+			<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+				<a class="btn-floating btn-large red">
+					<i class="large mdi-editor-mode-edit"></i>
+				</a>
+				<ul>
+					<li>
+						<a class="btn-floating red">
+							<i class="large mdi-editor-insert-chart"></i>
+						</a>
+					</li>
+					<li>
+						<a class="btn-floating yellow darken-1">
+							<i class="large mdi-editor-format-quote"></i>
+						</a>
+					</li>
+					<li>
+						<a class="btn-floating green">
+							<i class="large mdi-editor-publish"></i>
+						</a>
+					</li>
+					<li>
+						<a class="btn-floating blue">
+							<i class="large mdi-editor-attach-file"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<h1>Cards</h1>
+
+			<div class="row">
+				<div class="col s12 m6">
+					<div class="card blue-grey darken-1">
+						<div class="card-content white-text">
+							<span class="card-title">Card Title</span>
+							<p>I am a very simple card. I am good at containing small bits of information.
+							I am convenient because I require little markup to use effectively.</p>
+						</div>
+						<div class="card-action">
+							<a href="#">This is a link</a>
+							<a href='#'>This is a link</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 m7">
+				  <div class="card">
+				    <div class="card-image">
+				      <img src="img/sample-1.jpg">
+				      <span class="card-title">Card Title</span>
+				    </div>
+				    <div class="card-content">
+				      <p>I am a very simple card. I am good at containing small bits of information.
+				      I am convenient because I require little markup to use effectively.</p>
+				    </div>
+				    <div class="card-action">
+				      <a href="#">This is a link</a>
+				      <a href='#'>This is a link</a>
+				    </div>
+				  </div>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/office.jpg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i></span>
+					<p><a href="#">This is a link</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+					<p>Here is some more information about this product that is only revealed once clicked on.</p>
+				</div>
+			</div>
+
+			<h1>Forms</h1>
+
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s6">
+							<input id="first_name" type="text" class="validate">
+							<label for="first_name">First Name</label>
+						</div>
+						<div class="input-field col s6">
+							<input id="last_name" type="text" class="validate">
+							<label for="last_name">Last Name</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="username" type="text" class="validate">
+							<label for="username">Username</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="password" type="password" class="validate">
+							<label for="password">Password</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="email" type="email" class="validate">
+							<label for="email">Email</label>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<label>Materialize Select</label>
+			<select>
+				<option value="" disabled selected>Choose your option</option>
+				<option value="1">Option 1</option>
+				<option value="2">Option 2</option>
+				<option value="3">Option 3</option>
+			</select>
+
+			<label>Browser Select</label>
+			<select class="browser-default">
+				<option value="" disabled selected>Choose your option</option>
+				<option value="1">Option 1</option>
+				<option value="2">Option 2</option>
+				<option value="3">Option 3</option>
+			</select>
+
+<form action="#">
+  <p>
+    <input name="group1" type="radio" id="test1" />
+    <label for="test1">Red</label>
+  </p>
+  <p>
+    <input name="group1" type="radio" id="test2" />
+    <label for="test2">Yellow</label>
+  </p>
+  <p>
+    <input class="with-gap" name="group1" type="radio" id="test3"  />
+    <label for="test3">Green</label>
+  </p>
+    <p>
+      <input name="group1" type="radio" id="test4" disabled="disabled" />
+      <label for="test4">Brown</label>
+  </p>
+</form>
+
+<form action="#">
+  <p>
+    <input type="checkbox" id="test5" />
+    <label for="test5">Red</label>
+  </p>
+  <p>
+    <input type="checkbox" id="test6" checked="checked" />
+    <label for="test6">Yellow</label>
+  </p>
+  <p>
+    <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+    <label for="test7">Green</label>
+  </p>
+    <p>
+      <input type="checkbox" id="test8" disabled="disabled" />
+      <label for="test8">Brown</label>
+  </p>
+</form>
+
+<div class="switch">
+    <label>
+      Off
+      <input type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+  </div>
+
+  <!-- Disabled Switch -->
+  <div class="switch">
+    <label>
+      Off
+      <input disabled type="checkbox">
+      <span class="lever"></span>
+      On
+    </label>
+  </div>
+
+<form action="#">
+    <div class="file-field input-field">
+      <input class="file-path validate" type="text"/>
+      <div class="btn">
+        <span>File</span>
+        <input type="file" />
+      </div>
+    </div>
+  </form>
+
+<form action="#">
+  <p class="range-field">
+    <input type="range" id="test5" min="0" max="100" />
+  </p>
+</form>
+
+<input type="date" class="datepicker">
+
+			<h1>Collapsible</h1>
+
+			<ul class="collapsible" data-collapsible="accordion">
+				<li>
+					<div class="collapsible-header"><i class="mdi-image-filter-drama"></i>First</div>
+					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="mdi-maps-place"></i>Second</div>
+					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="mdi-social-whatshot"></i>Third</div>
+					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+				</li>
+			</ul>
+
+		</div>
 
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/materialize/dist/js/materialize.js"></script>
+
+		<script>
+
+			$('.datepicker').pickadate();
+
+			$('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70});
+
+			$('#toast').click(function(){
+				toast('I am a toast!', 4000);
+			});
+
+		</script>
 
 	</body>
 
