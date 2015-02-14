@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="1" id="com.alanjames1987.buttons" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    
+    <name>Buttons</name>
+    
+    <description>
+		
+	</description>
+    
+    <author email="alanjames1987@gmail.com" href="http://alanjames1987.com">
+		Alan James
+	</author>
+    
+    <content src="index.html" />
+    
+    <access origin="*" />
+    
+    <icon src="icon.png" />
+
+</widget>

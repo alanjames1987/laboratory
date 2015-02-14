@@ -1,0 +1,13 @@
+{
+  "name": "Labs-Marked",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Alan James",
+      "email": "alanjames1987@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "marked": "0.3.3"
+  }
+}
