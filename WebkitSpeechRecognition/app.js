@@ -14,28 +14,28 @@
 
 		recognition.onstart = function(event) {
 			console.log('onstart');
-			console.log(event);
+			// console.log(event);
 		};
 
 		recognition.onaudiostart = function(event) {
 			console.log('onaudiostart');
-			console.log(event);
+			// console.log(event);
 		};
 
 		recognition.onsoundstart = function(event) {
 			console.log('onsoundstart');
-			console.log(event);
+			// console.log(event);
 		};
 
 		recognition.onspeechstart = function(event) {
 			console.log('onspeechstart');
-			console.log(event);
+			// console.log(event);
 		};
 
 		recognition.onresult = function(event) {
 
 			console.log('onresult');
-			console.log(event);
+			// console.log(event);
 
 			var result = '';
 
@@ -55,21 +55,21 @@
 
 		recognition.onspeechend = function(event) {
 			console.log('onspeechend');
-			console.log(event);
+			// console.log(event);
 		};
 		recognition.onsoundend = function(event) {
 			console.log('onsoundend');
-			console.log(event);
+			// console.log(event);
 		};
 
 		recognition.onaudioend = function(event) {
 			console.log('onaudioend');
-			console.log(event);
+			// console.log(event);
 		};
 
 		recognition.onend = function(event) {
 			console.log('onend');
-			console.log(event);
+			// console.log(event);
 			this.start();
 		};
 
@@ -77,12 +77,12 @@
 
 		recognition.onerror = function(event) {
 			console.log('onerror');
-			console.log(event);
+			// console.log(event);
 		};
 
 		recognition.onnomatch = function(event) {
 			console.log('onnomatch');
-			console.log(event);
+			// console.log(event);
 		};
 
 		recognition.start();
