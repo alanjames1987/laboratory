@@ -3,6 +3,10 @@
 	<button ng-click="changeIt()">Change</button>
 	<button ng-click="readIt()">Read</button>
 
+	<input ng-model="something" />
+
+	<p>{{something}}</p>
+
 	<div ng-repeat="item in list">
 		<p>{{item.name}}</p>
 	</div>

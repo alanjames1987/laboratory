@@ -4,6 +4,8 @@
 
 	app.controller('SomethingController', ['$scope', function($scope) {
 
+		$scope.something = 'Some Name';
+
 		$scope.list = [{
 			name: 'Alan James'
 		}, {

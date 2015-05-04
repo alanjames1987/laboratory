@@ -1,15 +1,18 @@
 {
-	"name": "Labs-AngularJS",
-	"version": "0.0.1",
-	"authors": [{
-		"name": "Alan James",
-		"email": "alanjames1987@gmail.com"
-	}],
-	"dependencies": {
-		"angular": "1.2.22",
-		"angular-cookies": "1.2.22",
-		"angular-resource": "1.2.22",
-		"angular-route": "1.2.22",
-		"angular-sanitize": "1.2.22"
-	}
+  "name": "Labs-AngularJS",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Alan James",
+      "email": "alanjames1987@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "angular": "1.2.22",
+    "angular-cookies": "1.2.22",
+    "angular-resource": "1.2.22",
+    "angular-route": "1.2.22",
+    "angular-sanitize": "1.2.22",
+    "jquery": "2.0.3"
+  }
 }
