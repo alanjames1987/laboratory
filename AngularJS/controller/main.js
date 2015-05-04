@@ -17,13 +17,13 @@
 		}];
 
 		$scope.changeIt = function() {
-			this.list.push({
+			$scope.list.push({
 				name: 'Something'
 			});
 		};
 
 		$scope.readIt = function() {
-			console.log(this.list);
+			console.log($scope.list);
 		};
 
 	}]);
