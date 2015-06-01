@@ -1,0 +1,14 @@
+{
+  "name": "Labs-JWT",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Alan James",
+      "email": "alanjames1987@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "express": "4.12.4",
+    "express-jwt": "3.0.1"
+  }
+}
