@@ -1,2 +1,3 @@
-# Test Sails
-### a Sails application
+# testProject
+
+a [Sails](http://sailsjs.org) application
