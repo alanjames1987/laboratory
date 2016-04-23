@@ -1,15 +1,21 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Test</h1>
+                <h1>{this.props.txt}</h1>
             </div>
         );
     }
 }
 
-// const App = () => <div>Test</div>;
+App.propTypes = {
+    txt: React.PropTypes.string,
+};
 
-export default App;
+ReactDOM.render(
+    <App txt="Testing out props" />,
+    document.getElementById('app')
+);
