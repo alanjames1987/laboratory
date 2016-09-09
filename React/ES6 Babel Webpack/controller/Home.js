@@ -1,4 +1,5 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class ControllerHome extends React.Component {
 
@@ -10,6 +11,16 @@ class ControllerHome extends React.Component {
 
 		this.state.time = new Date().getTime();
 
+	}
+
+	render() {
+		return <div>
+			<br />
+			{this.state.time}
+			<br />
+			<br />
+			<RaisedButton label="Something" />
+		</div>
 	}
 
 	componentDidMount() {
@@ -24,12 +35,6 @@ class ControllerHome extends React.Component {
 
 	componentWillUnmount() {
 		clearInterval(this.timer);
-	}
-
-	render() {
-		return <div > {
-			this.state.time
-		} < /div>
 	}
 
 }
