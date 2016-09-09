@@ -1,3 +1,5 @@
+import React from 'react';
+
 class Thing extends React.Component {
 
 	render() {
@@ -6,4 +8,4 @@ class Thing extends React.Component {
 
 }
 
-ReactDOM.render(<Thing something="test" />, document.getElementById('app'))
+export default Thing

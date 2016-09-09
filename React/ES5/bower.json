@@ -8,6 +8,7 @@
     }
   ],
   "dependencies": {
-    "react": "^15.3.1"
+    "react": "15.3.1",
+    "babel": "^5.8.38"
   }
 }
