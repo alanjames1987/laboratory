@@ -1,16 +1,8 @@
 import $ from 'jquery';
 import Sammy from 'sammy';
 import React from 'react';
-import {
-	ReactDOM,
-	render
-} from 'react-dom';
-import {
-	Router,
-	Route,
-	Link,
-	browserHistory
-} from 'react-router';
+import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 
 import ControllerHome from './controller/Home';
 import ControllerOther from './controller/Other';
