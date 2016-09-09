@@ -10,18 +10,36 @@ import {
 	browserHistory
 } from 'react-router';
 
-import App from './App';
+import ControllerHome from './controller/Home';
+import ControllerOther from './controller/Other';
+import Controller404 from './controller/404';
 
-ReactDOM.render( <App something="test" /> , document.getElementById('app'));
+const App = React.createClass({
+  render() {
+    return (
+      <div>
+        <h1>App</h1>
+        <ul>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/inbox">Inbox</Link></li>
+        </ul>
+        {this.props.children}
+      </div>
+    )
+  }
+})
+
+const About = React.createClass({
+  render() {
+    return <h3>About</h3>
+  }
+})
 
 render((
 	<Router history={browserHistory}>
 		<Route path="/" component={App}>
-			<Route path="about" component={About} />
-			<Route path="users" component={Users}>
-				<Route path="/user/:userId" component={User} />
-			</Route>
-			<Route path="*" component={NoMatch} />
+			<Route path="other" component={About} />
+			<Route path="*" component={Controller404} />
 		</Route>
 	</Router>
-), document.getElementById('root'))
+), document.getElementById('app'))
