@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<!-- Required meta tags-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!-- Your app title -->
+		<title>My App</title>
+
+		<!-- Path to Framework7 iOS CSS theme styles-->
+		<link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.ios.css">
+
+		<!-- Path to Framework7 iOS related color styles -->
+		<link rel="stylesheet" href="bower_components/framework7/dist/css/framework7.ios.colors.css">
+
+		<!-- Path to your custom app styles-->
+		<!-- <link rel="stylesheet" href="app.css"> -->
+
+	</head>
+
+	<body>
+		<!-- Status bar overlay for full screen mode (PhoneGap) -->
+		<div class="statusbar-overlay"></div>
+
+		<!-- Panels overlay-->
+		<div class="panel-overlay"></div>
+
+		<!-- Left panel with reveal effect-->
+		<div class="panel panel-left panel-reveal">
+			<div class="content-block">
+				<p>Left panel content goes here</p>
+			</div>
+		</div>
+
+		<div class="views">
+			<div class="view view-main">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="center sliding">Awesome App</div>
+						<div class="right">
+							<a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="pages navbar-through toolbar-through">
+					<div data-page="index" class="page">
+						<div class="page-content">
+							<p>Page content goes here</p>
+							<a href="test.html">About app</a>
+						</div>
+					</div>
+				</div>
+				<div class="toolbar">
+					<div class="toolbar-inner">
+						<a href="#" class="link">Link 1</a>
+						<a href="#" class="link">Link 2</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pages">
+  <div data-page="about" class="page">
+    <div class="page-content">
+      <div class="content-block">
+        <p>Here is About page!</p>
+        <p>Fusce eros lectus, accumsan eget mi vel, iaculis tincidunt felis. Nulla tincidunt pharetra sagittis. Fusce in felis eros. Nulla sit amet aliquam lorem, et gravida ipsum. Mauris consectetur nisl non sollicitudin tristique. Praesent vitae metus ac quam rhoncus mattis vel et nisi. Aenean aliquet, felis quis dignissim iaculis, lectus quam tincidunt ligula, et venenatis turpis risus sed lorem. Morbi eu metus elit. Ut vel diam dolor.</p>
+      </div>
+    </div>
+  </div>
+</div> 
+
+		<script type="text/javascript" src="bower_components/framework7/dist/js/framework7.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+
+	</body>
+
+</html>

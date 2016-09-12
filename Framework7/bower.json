@@ -1,0 +1,13 @@
+{
+  "name": "Labs-Framework7",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Alan James",
+      "email": "alanjames1987@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "framework7": "1.4.2"
+  }
+}
