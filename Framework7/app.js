@@ -12,11 +12,3 @@ var mainView = app.addView('.view-main', {
 app.onPageInit('test', function(page) {
 	console.log('test');
 });
-
-$$(document).on('pageInit', function(e) {
-
-	var page = e.detail.page;
-
-	console.log(page);
-
-});
