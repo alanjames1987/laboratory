@@ -1,0 +1,13 @@
+{
+  "name": "Labs-Tesseract",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Alan James",
+      "email": "alanjames1987@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "tesseract.js": "^1.0.7"
+  }
+}
