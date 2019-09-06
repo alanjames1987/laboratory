@@ -5,7 +5,7 @@ import '@tensorflow/tfjs-node';
 import * as dataTrain from './iris.json';
 import * as dataTest from './iris-testing.json';
 
-const trainX = tf.tensor2d(dataTrain.map(item => {
+const x_train = tf.tensor2d(dataTrain.map(item => {
 
 	return [
 		item.sepal_length,
@@ -16,7 +16,7 @@ const trainX = tf.tensor2d(dataTrain.map(item => {
 
 }));
 
-const trainY = tf.tensor2d(dataTrain.map(item => {
+const y_train = tf.tensor2d(dataTrain.map(item => {
 
 	return [
 		item.species === 'setosa' ? 1 : 0,
@@ -26,7 +26,7 @@ const trainY = tf.tensor2d(dataTrain.map(item => {
 
 }));
 
-const testX = tf.tensor2d(dataTest.map(item => {
+const x_test = tf.tensor2d(dataTest.map(item => {
 
 	return [
 		item.sepal_length,
@@ -62,9 +62,9 @@ model.compile({
 });
 
 model
-	.fit(trainX, trainY, { epochs: 100, })
+	.fit(x_train, y_train, { epochs: 100, })
 	.then((history) => {
-		let predict = model.predict(testX) as tf.Tensor;
+		let predict = model.predict(x_test) as tf.Tensor;
 		predict.print();
 	});
 
