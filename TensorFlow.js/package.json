@@ -1,0 +1,19 @@
+{
+  "name": "tensorflow.js",
+  "version": "0.0.1",
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.11.6",
+    "@tensorflow/tfjs-node": "^0.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "10.12.18",
+    "nodemon": "1.18.9",
+    "ts-node": "7.0.1",
+    "tsconfig-paths": "3.7.0",
+    "tslint": "5.12.1",
+    "typescript": "3.2.4"
+  },
+   "scripts": {
+    "start:main": "ts-node -r tsconfig-paths/register src/main.ts"
+  }
+}
