@@ -62,7 +62,7 @@ model.compile({
 });
 
 model
-	.fit(trainX, trainY, { epochs: 100 })
+	.fit(trainX, trainY, { epochs: 100, })
 	.then((history) => {
 		let predict = model.predict(testX) as tf.Tensor;
 		predict.print();
