@@ -7,7 +7,7 @@
 	}],
 	"dependencies": {
 		"annyang": "1.0.1",
-		"express": "3.4.7"
+		"express": "4.17.1"
 	},
 	"main": "index.html",
 	"window": {
