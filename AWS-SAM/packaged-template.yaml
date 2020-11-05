@@ -15,5 +15,5 @@ Resources:
         Api1:
           Type: Api
           Properties:
-            Path: /alan
+            Path: /{any+}
             Method: ANY
