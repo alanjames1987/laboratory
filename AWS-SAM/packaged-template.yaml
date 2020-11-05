@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: My basic app.
+Resources:
+  ApiGateway:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs12.x
+      CodeUri: s3://alanjames1987-sam-test-bucket/502f6b4e08297ef12a9c1316a2747f2b
+      Description: My basic app.
+      MemorySize: 512
+      Timeout: 10
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /alan
+            Method: ANY
